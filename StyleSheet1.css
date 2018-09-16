@@ -1,0 +1,213 @@
+﻿body {
+    html
+
+{
+    font-family: proxima-nova, sans-serif, times-new-roman;
+}
+/*All Nav Elements Go Below*/
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 600px;
+    overflow: auto;
+}
+
+.nav-header {
+    margin-left: 40px;
+}
+
+.nav-flex-container {
+    display: none;
+}
+
+.nav-link {
+    background-color: #F0F3F4;
+    text-align: left;
+    display: block;
+    font-size: 2em;
+    height: 100%;
+    width: 100%;
+    line-height: 80px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: -10px;
+}
+
+#nav-list {
+    height: 100%;
+    min-width: 80%;
+    margin-left: 0px;
+}
+
+#ShowNav {
+    background-color: #F0F3F4;
+    animation-direction: normal;
+    height: 100%;
+    width: 150px;
+    font-size: 1.5em;
+    position: fixed;
+    border-width: 0px 3px 0px 3px;
+    border-style: solid;
+    border-color: #000842;
+}
+
+#HideNav {
+    background-color: #F0F3F4;
+    font-size: 3em;
+    border: none;
+    outline: none;
+    height: 30%;
+}
+
+button > header {
+    text-align: center;
+    color: #000842;
+    font-size: 1em;
+}
+
+li > header > h2 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0px;
+}
+/*All Nav Hover Classes Go Below*/
+#ShowNav:hover {
+    background-color: #000842;
+}
+
+    #ShowNav:hover > header {
+        color: white;
+    }
+
+#HideNav:hover {
+    background-color: #000842;
+}
+
+    #HideNav:hover > header {
+        color: white;
+    }
+/*All JavaScript Classes Go Below*/
+.ShowNavBar {
+    display: block;
+}
+
+.ChangeBtnSize {
+    visibility: hidden;
+}
+
+.ShiftBody {
+    margin-left: 750px !important;
+    margin-right: 20px !important;
+}
+/*All Body Elements Go Below*/
+#main-container {
+    margin: 0px 5% 0px 250px;
+}
+
+.body-container {
+    float: right;
+    border-radius: 40px;
+    background-color: #F0F3F4;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.Main-Section {
+    margin: 40px 80px 80px 80px;
+    text-align: justify;
+}
+
+.Description-Text {
+    font-size: 1.8em;
+}
+
+.Header-Text {
+    text-align: left;
+    font-size: 1.8em;
+}
+
+li {
+    list-style-type: none;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+code {
+    background-color: #EFF4FF;
+    font-family: Courier New;
+}
+
+/*All Body Color Classes Go Below*/
+.Red-Body {
+    border: 5px solid #EC7063;
+}
+
+.Orange-Body {
+    border: 5px solid #E59866;
+}
+
+.Yellow-Body {
+    border: 5px solid #F4D03F;
+}
+
+.Green-Body {
+    border: 5px solid #82E0AA;
+}
+
+.Light-Blue-Body {
+    border: 5px solid #85C1E9;
+}
+
+.Dark-Blue-Body {
+    border: 5px solid #4393FF;
+}
+
+.Purple-Body {
+    border: 5px solid #C39BD3;
+}
+
+.Pink-Body {
+    border: 5px solid #F7A5CD;
+}
+/*All Nav Color Classes Go Below*/
+
+.Red-Nav:hover {
+    background-color: #F5B7B1;
+}
+
+.Orange-Nav:hover {
+    background-color: #EDBB99;
+}
+
+.Yellow-Nav:hover {
+    background-color: #F9E79F;
+}
+
+.Green-Nav:hover {
+    background-color: #ABEBC6;
+}
+
+.Light-Blue-Nav:hover {
+    background-color: #BCF4F4;
+}
+
+.Dark-Blue-Nav:hover {
+    background-color: #95C5FF;
+}
+
+.Purple-Nav:hover {
+    background-color: #D2B4DE;
+}
+
+.Pink-Nav:hover {
+    background-color: #FFDDEF;
+}
+}

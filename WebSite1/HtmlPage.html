@@ -2,9 +2,414 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>FCC-Technical-Documentation</title>
+    <style>
+        html {
+  font-family: proxima-nova, sans-serif, times-new-roman;
+}
+/*All Nav Elements Go Below*/
+.nav-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 600px;
+}
+.nav-header{
+  margin-left: 40px;
+}
+.nav-flex-container{
+  display: none;
+}
+.nav-link{
+  background-color: #F0F3F4;
+  text-align: left;
+  display: block;
+  font-size: 2em;
+  height: 100%;
+  width: 100%;
+  line-height: 80px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: -10px;
+}
+#nav-list{
+  height: 100%;
+  width: 85%;
+  margin-left: 0px;
+    overflow: auto;
+}
+#ShowNav{
+background-color: #F0F3F4;
+height: 100%;
+width: 150px;
+font-size: 1.5em;
+position: fixed;
+border-width: 0px 3px 0px 3px;
+border-style: solid;
+border-color: #000842;
+}
+
+#HideNav{
+  background-color: #F0F3F4;
+  font-size: 3em;
+  border: none;
+  outline: none;
+  height: 30%;
+}
+button > header{
+ text-align: center;
+ color: #000842;
+ font-size: 1em;
+}
+li > header > h2{
+  text-align: center;
+}
+h2{
+  margin-top: 0px;
+}
+/*All Nav Hover Classes Go Below*/
+#ShowNav:hover{
+  background-color: #000842;
+}
+#ShowNav:hover > header{
+  color: white;
+}
+#HideNav:hover{
+  background-color: #000842;
+}
+#HideNav:hover > header{
+  color: white;
+}
+/*All JavaScript Classes Go Below*/
+.ShowNavBar{
+  display: block;
+  background-color: #F0F3F4;
+}
+.ChangeBtnSize{
+  visibility: hidden;
+}
+.ShiftBody{
+  margin-left: 600px !important;
+  margin-right: 20px !important;
+}
+/*All Body Elements Go Below*/
+#main-doc{
+    margin: 0px 0px 0px 250px;
+}
+.body-container{
+  float: right;
+  border-radius: 40px;
+  background-color: #F0F3F4;
+  width: 100%;
+  height: auto;
+  margin-bottom: 80px;
+}
+.Main-Section{
+  margin: 40px 40px 80px 40px;
+  text-align: left;
+}
+.Description-Text{
+  font-size: 1.8em;
+}
+.Header-Text{
+  text-align: left;
+  font-size: 1.8em;
+  }
+li{
+  list-style-type: none;
+  align-items: center;
+  margin-bottom: 10px;
+}
+ul{
+  padding-left: 0px;
+}
+code{
+  background-color: #EFF4FF;
+  font-family: Courier New;
+  word-break: break-all;
+}
+pre {
+	white-space: pre-line;      
+	word-wrap: break-word;
+	}
+/*All Body Color Classes Go Below*/
+.Red-Body{
+  border: 5px solid #EC7063;
+}
+.Orange-Body{
+  border: 5px solid #E59866;
+}
+.Yellow-Body{
+  border: 5px solid #F4D03F;
+}
+.Green-Body{
+  border: 5px solid #82E0AA;
+}
+.Light-Blue-Body{
+  border: 5px solid #85C1E9;
+}
+.Dark-Blue-Body{
+  border: 5px solid #4393FF;
+}
+.Purple-Body{
+  border: 5px solid #C39BD3;
+}
+.Pink-Body{
+  border: 5px solid #F7A5CD;
+}
+/*All Nav Color Classes Go Below*/
+
+.Red-Nav:hover{
+  background-color: #F5B7B1;
+}
+.Orange-Nav:hover{
+  background-color: #EDBB99;
+}
+.Yellow-Nav:hover{
+  background-color: #F9E79F;
+}
+.Green-Nav:hover{
+  background-color: #ABEBC6;
+}
+.Light-Blue-Nav:hover{
+  background-color: #BCF4F4;
+}
+.Dark-Blue-Nav:hover{
+  background-color: #95C5FF;
+}
+.Purple-Nav:hover{
+  background-color: #D2B4DE;
+}
+.Pink-Nav:hover{
+  background-color: #FFDDEF;
+}
+@media (max-width: 1300px){
+    #nav-list{
+        width: 70%;
+    }
+    .ShiftBody{
+        margin-left: 500px !important;
+    }
+}
+@media (max-width: 1000px) {
+
+    #ShowNav {
+        height: 100px;
+        width: 100%;
+        border: none;
+    }
+    .Main-Section{
+        margin: 5%;
+    }
+    #nav-list{
+        width: 100%;
+    }
+    .nav-container{
+        width: 100%;
+        height: 100%; 
+    }
+    .Description-Text{
+        font-size: 1em;
+    }
+    #main-doc{
+    margin: 120px 5% 0px 5%;
+}
+    .Header-Text > h1{
+    word-break: initial;
+}
+    @media (max-width: 600px){
+        #main-doc{
+            margin: 120px 0px 0px 0px;
+        }
+        .body-container{
+            max-width: 100%;
+        }
+    }
+}
+    </style>
+    <script>
+        function ShowCont() {
+            document.getElementById("nav-list").classList.toggle("ShowNavBar");
+            document.getElementById("ShowNav").classList.toggle("ChangeBtnSize");
+            document.getElementById("main-doc").classList.toggle("ShiftBody");
+        }
+ 
+    </script>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <nav id="navbar" class="nav-container">
+  <button onclick="ShowCont()" type="button" id="ShowNav" class="nav-link"><header><h2 >Show</h2></header></button>
+
+  <div id="nav-list" class="nav-flex-container">
+
+    <button type="button" onclick="ShowCont()" id="HideNav" class="nav-link">
+        <header>HTML Documentation</header>
+    </button>
+    <div id="nav-btn">
+        <a class="nav-link Red-Nav" onclick="ShowCont()" href="#What_Is_HTML">
+          <header class="nav-header">What is HTML</header>
+        </a>
+
+        <a class="nav-link Orange-Nav" onclick="ShowCont()" href="#HTML_Structure">
+          <header class="nav-header">HTML Structure</header>
+        </a>
+
+        <a class="nav-link Yellow-Nav" onclick="ShowCont()" href="#HTML_Metadata">
+          <header class="nav-header">HTML Metadata</header>
+        </a>
+
+        <a class="nav-link Green-Nav" onclick="ShowCont()" href="#Create_Text">
+          <header class="nav-header">Create Text</header>
+        </a>
+
+        <a class="nav-link Light-Blue-Nav" onclick="ShowCont()" href="#Create_a_Link">
+          <header class="nav-header">Create a Link</header>
+        </a>
+
+        <a class="nav-link Dark-Blue-Nav" onclick="ShowCont()" href="#Create_an_Image">
+          <header class="nav-header">Create an Image</header>
+        </a>
+
+        <a class="nav-link Purple-Nav" onclick="ShowCont()" href="#Embed_Audio_and_Video">
+          <header class="nav-header">Embed Audio and Video</header>
+        </a>
+
+        <a class="nav-link Pink-Nav" onclick="ShowCont()" href="#Further_Resources">
+          <header class="nav-header">Further Resources</header>
+        </a>
+    </div>
+  </div>
+</nav>
+<main id="main-doc"">
+  <div class="body-container Red-Body">
+    <section id="What_Is_HTML" class="Main-Section">
+      <header class="Header-Text">
+        <h2>What is HTML</h2>
+      </header>
+      <p class="Description-Text">HTML (Hypertext Markup Language) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests,
+        this article will give you a basic understanding of HTML and its functions.</p>
+      <p class="Description-Text">HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as <code>&lt;head&gt;, &lt;title&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, &lt;p&gt;, &lt;div&gt;, &lt;span&gt;, &lt;img&gt;, &lt;aside&gt;, &lt;audio&gt;, &lt;canvas&gt;, &lt;datalist&gt;, &lt;details&gt;, &lt;embed&gt;, &lt;nav&gt;, &lt;output&gt;, &lt;progress&gt;, &lt;video&gt;</code>        and many others.</p>
+      <p class="Description-Text">Tags in HTML are case insensitive. That is, they can be written in uppercase, lowercase, or a mixture. Example <code>&lt;title&gt;</code> tag can be written as <code>&lt;Title&gt;,&lt;TITLE&gt;</code> or in any other way.</p>
+    </section>
+  </div>
+  <div class="body-container Orange-Body main-doc">
+    <section id="HTML_Structure" class="Main-Section">
+      <header class="Header-Text">
+        <h2>HTML Structure</h2>
+      </header>
+      <p class="Description-Text">It's good to understand the overall meaning of all the HTML sectioning elements in detail — this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our HTML element
+        reference. For now, these are the main definitions that you should try to understand:</p>
+      <ul id="Structure-List">
+        <li><code>&lt;main&gt;</code> is for content unique to this page. Use <code>&lt;main&gt;</code> only once per page, and put it directly inside <code>&lt;body&gt;</code>. Ideally
+          this shouldn't be nested within other elements</li>
+        <li><code>&lt;article&gt;</code> encloses a block of related content that makes sense on its own without the rest of the page (e.g. a single blog post.)</li>
+        <li><code>&lt;section&gt;</code> is similar to <code>&lt;article&gt;</code>, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g.
+          a mini map, or a set of article headlines and summaries.) It's considered best practice to begin each section with a heading; also note that you can break <code>&lt;article&gt;</code>s up into different <code>&lt;section&gt;</code>s,
+          or <code>&lt;section&gt;</code>s up into different <code>&lt;article&gt;</code>s, depending on the context.</li>
+        <li><code>&lt;aside&gt;</code> contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.)</li>
+        <li><code>&lt;header&gt;</code> represents a group of introductory content. If it is a child of <code>&lt;body&gt;</code> it defines the global header of a webpage, but if it's a child of an
+          <code>&lt;article&gt;</code> or <code>&lt;section&gt;</code> it defines a specific header for that section (try not to confuse this with titles and headings.)</li>
+        <li><code>&lt;nav&gt;</code> contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation tag.</li>
+        <li><code>&lt;footer&gt;</code> represents a group of end content for a page.</li>
+      </ul>
+      <p class="Description-Text">Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with
+        some CSS or JavaScript. For cases like these, HTML provides the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements.</p>
+    </section>
+  </div>
+  <div class="body-container Yellow-Body">
+    <section id="HTML_Metadata" class="Main-Section">.
+      <header class="Header-Text">
+        <h2>HTML Metadata</h2>
+      </header>
+      <p class="Description-Text">The head of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page <code>&lt;title&gt;</code>, links to CSS (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document).</p>
+      <pre>
+        <code>
+      &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;My test page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;This is my page&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+    </code>
+          </pre>
+      <p class="Description-Text">The HTML head is the contents of the <code>&lt;head&gt;</code> element — unlike the contents of the <code>&lt;body&gt;</code> element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to
+        contain metadata about the document.</p>
+    </section>
+  </div>
+  <div class="body-container Green-Body main-doc">
+    <section id="Create_Text" class="Main-Section">
+      <header class="Header-Text">
+        <h2>Create Text</h2>
+      </header>
+      <p class="Description-Text">Most structured text is comprised of headings and paragraphs, irrespective of whether you are reading a story, a newspaper, a college textbook, a magazine, etc.<br>In HTML, each paragraph has to be wrapped in a <code>&lt;p&gt;</code> element, like so:</p>
+      <pre><code>&lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</code></pre>
+      <p class="Description-Text">In HTML, each heading has to be wrapped in a <pre><code>&lt;h&gt;</code></pre> element, like so:</p>
+      <pre><code>&lt;h1&gt;I am the title of the story.&lt;/h1&gt;</code></pre>
+      <p class="Description-Text">There are six heading elements — <pre><code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;</code></pre>. Each element represents a different level of content in the document; <pre><code>&lt;h1&gt;</code></pre>represents the main heading,<pre><code>&lt;h2&gt;</code></pre> represents subheadings, <pre><code>&lt;h3&gt;</code></pre> represents sub-subheadings, and so on.</p>
+    </section>
+  </div>
+  <div class="body-container Light-Blue-Body main-doc">
+    <section id="Create_a_Link" class="Main-Section">
+      <header class="Header-Text">
+        <h2>Create a Link</h2>
+      </header>
+      <p class="Description-Text">Hyperlinks are one of the most exciting innovations the Web has to offer. Well, they've been a feature of the Web since the very beginning, but they are what makes the Web a Web — they allow us to link our documents to any other document (or other
+        resource) we want to, we can also link to specific parts of documents, and we can make apps available at a simple web address (contrast this to native apps, which have to be installed and all that business.) Just about any web content can be converted
+        to a link, so that when clicked (or otherwise activated) it will make the web browser go to another web address (URL).</p>
+      <pre><code>&lt;p&gt;I'm creating a link to
+&lt;a href = "https://www.mozilla.org/en-US/">the Mozilla homepage&lt;/a&gt;.
+</code></pre>
+      <p class="Description-Text">A basic link is created by wrapping the text (or other content, see Block level links) you want to turn into a link inside an <code>&lt;a&gt;</code> element, and giving it an href attribute (also known as a Hypertext Reference, or target) that will contain the web address you want the link to point to.</p>
+    </section>
+  </div>
+  <div class="body-container Dark-Blue-Body main-doc">
+    <section id="Create_an_Image" class="Main-Section">
+      <header class="Header-Text">
+        <h2>Create an Image</h2>
+      </header>
+      <p class="Description-Text">In order to put a simple image on a webpage, we use the <code>&lt;img&gt;</code> element. This is an empty element (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — src (sometimes spoken
+        as its full title, source). The src attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as <code>&lt;a&gt;</code> element <code>&lt;href&gt;</code> attribute values.</p>
+      <code>&lt;img src="dinosaur.jpg&gt;</code>
+      <p class = "Description-Text">You could embed the image using its absolute URL, for example:</p>
+    <p class ="Description-Text"><pre><code style ="overflow-wrap: break-all;">&lt;img 
+        src="https://www.example.com/images/dinosaur.jpg"&gt;<br>
+        &lt;/img&gt;</code></pre>
+   But this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You'll almost always keep the images for your website on the same server as your HTML.</p>
+  </section>
+</div>
+<div class = "body-container Purple-Body main-doc">
+  <section id = "Embed_Audio_and_Video" class = "Main-Section">
+    <header class = "Header-Text"><h2>Embed Audio and Video</h2></header>
+    <p class = "Description-Text">The <code>&lt;video&gt;</code> element allows you to embed a video very easily. A really simple example looks like this</p>
+    <code class = "Description-Text">&lt;video src="rabbit320.webm" controls&gt;<br>
+  &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.webm">link to the video&lt;/a&gt; instead.&lt;/p&gt; 
+&lt;/video&gt;</code>
+    <p class = "Description-Text">The <code>&lt;audio&gt;</code> element works in exactly the same way as the <code>&lt;video&gt;</code> element, with a few small differences as outlined below. A typical example might look like so:</p>
+      <pre>
+      <code>
+        &lt;audio controls&gt;<br>
+  &lt;source src="viper.mp3" type="audio/mp3"&gt;<br>
+  &lt;source src="viper.ogg" type="audio/ogg"&gt;<br>
+  &lt;p&gt;Your browser doesn't support HTML5 audio. Here is a &lt;a href="viper.mp3">link to the audio&lt;/a&gt; instead.&lt;/p&gt;<br>&lt;/audio&gt;
+    </code>
+          </pre>
+  </section>
+</div>
+<div class = "body-container Pink-Body main-doc">
+<section id = "Further_Resources" class = "Main-Section">
+  <header class = "Header-Text"><h2>Further Resources</h2></header>
+  <ul>
+  <li>For further infomation about HTML please visit <a href = "https://developer.mozilla.org/en-US/docs/Web/HTML">Mozilla's HTML documentation</a>.</li>
+        <li> For infomation about how to style your HTML code please visit <a href="https://www.w3schools.com/css/default.asp">W3-School's CSS guide</a>.</li>
+        <li> All content from this project was taken from <a  href="https://developer.mozilla.org/en-US/docs/Web/HTML">Mozilla's HTML documentation</a>.</li>
+        </ul>
+    </section>
+  </div>
+</main>
 </body>
 </html>
